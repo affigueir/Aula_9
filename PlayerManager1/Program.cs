@@ -4,7 +4,7 @@ namespace PlayerManager1
 {
     class Program
     {
-        private List<Player> playerList;
+        private static List<Player> playerList;
         
         static void Main(string[] args)
         {
@@ -14,7 +14,7 @@ namespace PlayerManager1
 
             for (int i = 0; i < numPlayers; i++)
             {
-                System.Console.WriteLine("PLayer's name?");
+                System.Console.WriteLine("Player's name?");
                 string name = Console.ReadLine();
                 System.Console.WriteLine("Player's score?");
                 int score = Int32.Parse(Console.ReadLine());
@@ -34,7 +34,7 @@ namespace PlayerManager1
             {
                 if (item.Score > compareScore)
                 {
-                    System.Console.WriteLine($"{item} has a higher score than {compareScore}");
+                    System.Console.WriteLine($"{item.Name} has a higher score than {compareScore}");
 
                 }
             } 
