@@ -4,13 +4,13 @@ namespace PlayerManager1
 {
     class Program
     {
-        private static List<Player> playerList;
+        //private static List<Player> playerList;
         
         static void Main(string[] args)
         {
             Console.WriteLine("How many players are there?");
             int numPlayers = Int32.Parse(Console.ReadLine());
-            playerList = new List<Player>();
+            List<Player> playerList = new List<Player>();
 
             for (int i = 0; i < numPlayers; i++)
             {
@@ -22,10 +22,10 @@ namespace PlayerManager1
                 
                 playerList.Add(new Player(name, score));
             }
-            CompareScore();
+            CompareScore(playerList);
         }
 
-        public static void CompareScore()
+        public static void CompareScore(List<Player> playerList)
         {
             System.Console.WriteLine("What is the value you wish to compare?");
             int compareScore = Int32.Parse(Console.ReadLine());
